@@ -1,0 +1,285 @@
+@import "tailwindcss";
+
+@layer base {
+  /* Theme 1: Nordic Frost & Mint (Linear Light Style — Bright & Clean) */
+  :root,
+  [data-theme="nordic"] {
+    --theme-name: 'nordic';
+    --bg-primary: #f1f5f9;
+    --bg-secondary: #ffffff;
+    --bg-card: #ffffff;
+    --bg-card-from: #ffffff;
+    --bg-card-to: #f8fafc;
+    --bg-card-inner: #f8fafc;
+    --border-color: #e2e8f0;
+    --border-subtle: #edf2f7;
+    --border-hover: #cbd5e1;
+    --accent-primary: #059669;
+    --accent-hover: #047857;
+    --accent-text: #059669;
+    --accent-badge-bg: #ecfdf5;
+    --accent-badge-border: #a7f3d0;
+    --accent-badge-text: #065f46;
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+    --card-hover-shadow: 0 6px 16px -2px rgba(0, 0, 0, 0.08);
+    --badge-critical-bg: #fef2f2;
+    --badge-critical-border: #fecaca;
+    --badge-critical-text: #b91c1c;
+    --badge-high-bg: #fffbeb;
+    --badge-high-border: #fde68a;
+    --badge-high-text: #b45309;
+    --badge-medium-bg: #fefce8;
+    --badge-medium-border: #fef08a;
+    --badge-medium-text: #854d0e;
+    --badge-low-bg: #ecfdf5;
+    --badge-low-border: #a7f3d0;
+    --badge-low-text: #065f46;
+  }
+
+  /* Theme 2: Deep Cobalt & Slate (Datadog & Cloudflare SOC Style — Dark) */
+  [data-theme="cobalt"] {
+    --theme-name: 'cobalt';
+    --bg-primary: #0a0d14;
+    --bg-secondary: #0d121c;
+    --bg-card: #111726;
+    --bg-card-from: #131a2a;
+    --bg-card-to: #101624;
+    --bg-card-inner: #0f1420;
+    --border-color: #1e293b;
+    --border-subtle: #172033;
+    --border-hover: #2c3a50;
+    --accent-primary: #2563eb;
+    --accent-hover: #1d4ed8;
+    --accent-text: #60a5fa;
+    --accent-badge-bg: rgba(37, 99, 235, 0.15);
+    --accent-badge-border: rgba(37, 99, 235, 0.35);
+    --accent-badge-text: #93c5fd;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #64748b;
+    --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+    --card-hover-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.45);
+    --badge-critical-bg: rgba(69, 26, 26, 0.6);
+    --badge-critical-border: rgba(127, 29, 29, 0.6);
+    --badge-critical-text: #fca5a5;
+    --badge-high-bg: rgba(69, 38, 10, 0.6);
+    --badge-high-border: rgba(120, 53, 15, 0.6);
+    --badge-high-text: #fcd34d;
+    --badge-medium-bg: rgba(61, 47, 10, 0.6);
+    --badge-medium-border: rgba(113, 63, 18, 0.6);
+    --badge-medium-text: #fde047;
+    --badge-low-bg: rgba(6, 78, 59, 0.6);
+    --badge-low-border: rgba(6, 95, 70, 0.6);
+    --badge-low-text: #6ee7b7;
+  }
+
+  /* Theme 3: Warm Graphite & Amber (Bloomberg Industrial SOC Style — Warm Dark) */
+  [data-theme="amber"] {
+    --theme-name: 'amber';
+    --bg-primary: #0d0e11;
+    --bg-secondary: #131418;
+    --bg-card: #16171d;
+    --bg-card-from: #191a22;
+    --bg-card-to: #14151a;
+    --bg-card-inner: #111216;
+    --border-color: #262832;
+    --border-subtle: #1d1e25;
+    --border-hover: #3e4150;
+    --accent-primary: #d97706;
+    --accent-hover: #b45309;
+    --accent-text: #fbbf24;
+    --accent-badge-bg: rgba(217, 119, 6, 0.15);
+    --accent-badge-border: rgba(217, 119, 6, 0.35);
+    --accent-badge-text: #fde68a;
+    --text-primary: #f4f4f5;
+    --text-secondary: #d4d4d8;
+    --text-muted: #71717a;
+    --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+    --card-hover-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.45);
+    --badge-critical-bg: rgba(69, 26, 26, 0.6);
+    --badge-critical-border: rgba(127, 29, 29, 0.6);
+    --badge-critical-text: #fca5a5;
+    --badge-high-bg: rgba(69, 38, 10, 0.6);
+    --badge-high-border: rgba(120, 53, 15, 0.6);
+    --badge-high-text: #fcd34d;
+    --badge-medium-bg: rgba(61, 47, 10, 0.6);
+    --badge-medium-border: rgba(113, 63, 18, 0.6);
+    --badge-medium-text: #fde047;
+    --badge-low-bg: rgba(6, 78, 59, 0.6);
+    --badge-low-border: rgba(6, 95, 70, 0.6);
+    --badge-low-text: #6ee7b7;
+  }
+
+  /* Theme 4: Obsidian & Mint (Linear / Hacker Minimalist Style — Pitch Dark) */
+  [data-theme="emerald"] {
+    --theme-name: 'emerald';
+    --bg-primary: #08090c;
+    --bg-secondary: #0c0e12;
+    --bg-card: #101217;
+    --bg-card-from: #12151b;
+    --bg-card-to: #0e1014;
+    --bg-card-inner: #0a0c0f;
+    --border-color: #1c2028;
+    --border-subtle: #15181f;
+    --border-hover: #2d3442;
+    --accent-primary: #059669;
+    --accent-hover: #047857;
+    --accent-text: #34d399;
+    --accent-badge-bg: rgba(5, 150, 105, 0.15);
+    --accent-badge-border: rgba(5, 150, 105, 0.35);
+    --accent-badge-text: #6ee7b7;
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+    --text-muted: #6b7280;
+    --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+    --card-hover-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.45);
+    --badge-critical-bg: rgba(69, 26, 26, 0.6);
+    --badge-critical-border: rgba(127, 29, 29, 0.6);
+    --badge-critical-text: #fca5a5;
+    --badge-high-bg: rgba(69, 38, 10, 0.6);
+    --badge-high-border: rgba(120, 53, 15, 0.6);
+    --badge-high-text: #fcd34d;
+    --badge-medium-bg: rgba(61, 47, 10, 0.6);
+    --badge-medium-border: rgba(113, 63, 18, 0.6);
+    --badge-medium-text: #fde047;
+    --badge-low-bg: rgba(6, 78, 59, 0.6);
+    --badge-low-border: rgba(6, 95, 70, 0.6);
+    --badge-low-text: #6ee7b7;
+  }
+
+  /* Theme 5: Titanium Zinc & Iris (Raycast / Modern Dark Style) */
+  [data-theme="zinc"] {
+    --theme-name: 'zinc';
+    --bg-primary: #09090b;
+    --bg-secondary: #0e0e11;
+    --bg-card: #131316;
+    --bg-card-from: #16161a;
+    --bg-card-to: #111114;
+    --bg-card-inner: #0b0b0e;
+    --border-color: #222227;
+    --border-subtle: #19191d;
+    --border-hover: #38383f;
+    --accent-primary: #6366f1;
+    --accent-hover: #4f46e5;
+    --accent-text: #818cf8;
+    --accent-badge-bg: rgba(99, 102, 241, 0.15);
+    --accent-badge-border: rgba(99, 102, 241, 0.35);
+    --accent-badge-text: #c7d2fe;
+    --text-primary: #fafafa;
+    --text-secondary: #e4e4e7;
+    --text-muted: #71717a;
+    --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+    --card-hover-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.45);
+    --badge-critical-bg: rgba(69, 26, 26, 0.6);
+    --badge-critical-border: rgba(127, 29, 29, 0.6);
+    --badge-critical-text: #fca5a5;
+    --badge-high-bg: rgba(69, 38, 10, 0.6);
+    --badge-high-border: rgba(120, 53, 15, 0.6);
+    --badge-high-text: #fcd34d;
+    --badge-medium-bg: rgba(61, 47, 10, 0.6);
+    --badge-medium-border: rgba(113, 63, 18, 0.6);
+    --badge-medium-text: #fde047;
+    --badge-low-bg: rgba(6, 78, 59, 0.6);
+    --badge-low-border: rgba(6, 95, 70, 0.6);
+    --badge-low-text: #6ee7b7;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    letter-spacing: -0.011em;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  code, kbd, samp, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Dynamic SOC Panel Styling linked to Theme Variables */
+.cyber-card,
+.soc-card {
+  background: var(--bg-card);
+  background: linear-gradient(180deg, var(--bg-card-from) 0%, var(--bg-card-to) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 0.625rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  box-shadow: var(--card-shadow, 0 1px 3px 0 rgba(0, 0, 0, 0.35));
+}
+
+.cyber-card:hover,
+.soc-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--card-hover-shadow, 0 4px 20px -2px rgba(0, 0, 0, 0.45));
+}
+
+/* Adaptive Severity Badges */
+.badge-critical {
+  background-color: var(--badge-critical-bg);
+  border: 1px solid var(--badge-critical-border);
+  color: var(--badge-critical-text);
+}
+
+.badge-high {
+  background-color: var(--badge-high-bg);
+  border: 1px solid var(--badge-high-border);
+  color: var(--badge-high-text);
+}
+
+.badge-medium {
+  background-color: var(--badge-medium-bg);
+  border: 1px solid var(--badge-medium-border);
+  color: var(--badge-medium-text);
+}
+
+.badge-low {
+  background-color: var(--badge-low-bg);
+  border: 1px solid var(--badge-low-border);
+  color: var(--badge-low-text);
+}
+
+/* Subtle, authentic status indicators */
+.soc-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  display: inline-block;
+}
+
+/* Crisp Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}
+
+/* High-cadence pulse indicator for live monitoring */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
